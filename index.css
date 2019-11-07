@@ -1,0 +1,95 @@
+:root {
+    --main-bg-colour: seashell;
+    --textbox-bg-colour: seashell;
+    --textbox-border-invalid-colour: crimson;
+    --textbox-border-valid-colour: burlywood;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--main-bg-colour);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+#label {
+    font-size: 2rem;
+    width: 40%;
+    text-align: center;
+}
+
+#description {
+    margin: 4px 0;
+    font-size: 1rem;
+}
+
+@media (max-width: 700px) {
+    #label {
+        width: 60%;
+    }
+}
+
+@media (max-width: 512px) {
+    #label {
+        width: 90%;
+    }
+}
+
+#numbers {
+    font-size: 1.5rem;
+    display: block;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: var(--textbox-bg-colour);
+    outline: 0;
+    color: black;
+    margin-top: 20px;
+}
+
+#numbers:invalid {
+    border: 1px solid var(--textbox-border-invalid-colour);
+}
+
+#numbers:valid {
+    border: 1px solid var(--textbox-border-valid-colour);
+}
+
+#result {
+    font-size: 1rem;
+    width: 70%;
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+}
+
+#loading, #empty {
+    font-size: 1rem;
+}
+
+footer {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-github {
+    font-size: 2.5em;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.fa-github:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
